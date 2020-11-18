@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Map : MonoBehaviour
 {
-    public Vector2 [,]grid;
     
+    public Vector2 [,] hex_grid;
     
     void Start()
     {
