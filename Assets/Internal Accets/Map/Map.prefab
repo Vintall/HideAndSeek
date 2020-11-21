@@ -58,6 +58,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map_script: {fileID: -7915797640911815299}
   hex: {fileID: 7037237522430991063, guid: 776554ea2dedab0469a6ce1b4e0e8b3f, type: 3}
-  x: 20
-  y: 20
-  high_radius: 1.01
+  x: 0
+  y: 0
+  high_radius: 1.03

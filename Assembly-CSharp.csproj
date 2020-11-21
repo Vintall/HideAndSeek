@@ -55,12 +55,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Internal Accets\Player\Cam_Movement.cs" />
     <Compile Include="Assets\Internal Accets\Map\Map.cs" />
+    <Compile Include="Assets\Internal Accets\Player\Player_States.cs" />
     <Compile Include="Assets\Internal Accets\Map\Map_Generator.cs" />
     <Compile Include="Assets\Internal Accets\Hexagone\HexagoneStates.cs" />
-    <Compile Include="Assets\Internal Accets\Player\Player_States.cs" />
     <Compile Include="Assets\Internal Accets\Player\Player_Movenent.cs" />
-    <Compile Include="Assets\Internal Accets\Player\Cam_Movement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
