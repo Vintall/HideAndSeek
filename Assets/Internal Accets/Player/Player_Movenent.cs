@@ -19,7 +19,16 @@ public class Player_Movenent : MonoBehaviour
     void OnGroundCheck(bool is_on, Collision collision)
     {
         if (collision.gameObject.tag == "Ground")
-            is_on_ground = is_on;
+        {
+            if (is_on) StartCoroutine(CanJump());
+            else
+                is_on_ground = is_on;
+        }
+    }
+    IEnumerator CanJump()
+    {
+        yield return new WaitForSeconds(0.3f);
+        is_on_ground = true;
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -39,8 +48,7 @@ public class Player_Movenent : MonoBehaviour
     void FixedUpdate()
     {
         MoveLogic();
-        if (is_on_ground)
-            JumpLogic();
+        JumpLogic();
     }
     void MoveLogic()
     {
@@ -60,13 +68,19 @@ public class Player_Movenent : MonoBehaviour
         Vector3 movement = movement_horizontal + movement_vertical;
 
         rb.AddForce(movement.normalized * move_speed, ForceMode.Impulse);
+        //rb.MoveRotation(Quaternion.Euler(movement.normalized * move_speed));
     }
+    
     void JumpLogic()
     {
-        if (Input.GetAxis("Jump") > 0)
+        if (is_on_ground)
         {
-            rb.AddForce(Vector3.up * jump_speed);
+            if (Input.GetAxis("Jump") > 0)
+            {
+                rb.AddForce(Vector3.up * jump_speed);
+            }
         }
     }
+    
 
 }
