@@ -68,7 +68,6 @@ public class Player_Movenent : MonoBehaviour
         Vector3 movement = movement_horizontal + movement_vertical;
 
         rb.AddForce(movement.normalized * move_speed, ForceMode.Impulse);
-        //rb.MoveRotation(Quaternion.Euler(movement.normalized * move_speed));
     }
     
     void JumpLogic()

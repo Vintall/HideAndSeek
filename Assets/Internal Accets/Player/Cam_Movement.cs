@@ -4,32 +4,64 @@ using UnityEngine;
 
 public class Cam_Movement : MonoBehaviour
 {
+    enum CamPersonMode
+    {
+        FirstPersonMode,
+        ThirdPersonMode,
+        Ghost
+    }
+    [SerializeField] CamPersonMode cam_mode;
     [SerializeField] GameObject player;
-    [SerializeField] float y_angle = 60;
     [SerializeField] float distance = 10;
-    [SerializeField] float rotation_power = 1f;
+    [SerializeField] float sensitivity = 1f;
     void Start()
     {
 
     }
-    float r_axis;
+    Vector2 mouse_axis;
     void CheckRotate()
     {
-        r_axis = Input.GetAxis("Cam_Rotation");
-        if (r_axis != 0)
-        {
-            RotateCam(r_axis);
-        }
+        mouse_axis = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        if (mouse_axis.magnitude != 0)
+            RotateCam(mouse_axis);
     }
     public void MoveCam()
     {
         Vector3 forw = transform.forward;
-        transform.position = player.transform.position - forw * distance;
+        if (cam_mode == CamPersonMode.ThirdPersonMode)
+        {
+            transform.position = player.transform.position - forw * distance;
+        }
+        else if (cam_mode == CamPersonMode.FirstPersonMode)
+        {
+            transform.position = player.transform.position;
+        }
+        else if (cam_mode == CamPersonMode.Ghost)
+        {
+            transform.position = player.transform.position - forw * distance;
+        }
+        
+        
     }
-    void RotateCam(float r)
+    void RotateCam(Vector2 _mouse_axis)
     {
-        r *= -1 * rotation_power / 10;
-        transform.RotateAround(player.transform.position, Vector3.up, r);
+        _mouse_axis *= sensitivity / 10;
+        _mouse_axis.y *= -1;
+        if (cam_mode == CamPersonMode.ThirdPersonMode)
+        {
+            transform.RotateAround(player.transform.position, Vector3.up, _mouse_axis.x);
+            transform.RotateAround(player.transform.position, transform.right, _mouse_axis.y);
+        }
+        else if (cam_mode == CamPersonMode.FirstPersonMode)
+        {
+            transform.Rotate(new Vector3(0, _mouse_axis.x, 0), Space.World);
+            transform.Rotate(new Vector3(_mouse_axis.y, 0, 0), Space.Self);
+
+        }
+        else if (cam_mode == CamPersonMode.Ghost)
+        {
+            transform.RotateAround(player.transform.position, Vector3.up, _mouse_axis.x);
+        }
     }
     private void Update()
     {
