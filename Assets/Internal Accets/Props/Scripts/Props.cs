@@ -9,9 +9,4 @@ public class Props : MonoBehaviour
     {
         props = GameObject.FindGameObjectsWithTag("Prop");
     }
-
-    void Update()
-    {
-        
-    }
 }

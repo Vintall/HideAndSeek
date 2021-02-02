@@ -32,6 +32,7 @@ public class Cam_Movement : MonoBehaviour
         if (cam_mode == CamPersonMode.ThirdPersonMode)
         {
             transform.position = player.transform.position - forw * distance;
+            transform.Translate(Vector3.up * 2);
         }
         else if (cam_mode == CamPersonMode.FirstPersonMode)
         {

@@ -7,7 +7,7 @@ public class Move_Logic : MonoBehaviour
     [SerializeField] float move_speed;
     [SerializeField] float run_speed;
     [SerializeField] float sneak_speed;
-    [SerializeField] Camera cam;
+    [SerializeField] public Camera cam;
     Rigidbody rb;
     void Start()
     {

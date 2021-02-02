@@ -57,20 +57,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Internal Accets\Props\Scripts\Props.cs" />
+    <Compile Include="Assets\Internal Accets\Props\Scripts\PropsState.cs" />
     <Compile Include="Assets\Internal Accets\Props\Scripts\PropsSpawner.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Cam_Movement.cs" />
     <Compile Include="Assets\Internal Accets\Props\Scripts\Add_RB.cs" />
     <Compile Include="Assets\Internal Accets\Map\Map.cs" />
+    <Compile Include="Assets\Internal Accets\Player\Scripts\ChangeProp.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Player_States.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Jump_Logic.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Move_Logic.cs" />
     <Compile Include="Assets\Internal Accets\Map\Map_Generator.cs" />
     <Compile Include="Assets\Internal Accets\Hexagone\HexagoneStates.cs" />
+    <Compile Include="Assets\Internal Accets\Player\Scripts\Select_Prop.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Game_Controller.cs" />
-    <Compile Include="Assets\Internal Accets\Props\Scripts\PropsState.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Internal Accets\Props\NewSurfaceShader.shader" />
+     <None Include="Assets\Silhouetted Diffuse.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.15f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
