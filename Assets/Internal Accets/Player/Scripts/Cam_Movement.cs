@@ -15,6 +15,14 @@ public class Cam_Movement : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] float distance = 10;
     [SerializeField] float sensitivity = 1f;
+    [SerializeField] float lift_up_cam = 2;
+    Vector3 LiftUp
+    {
+        get
+        {
+            return Vector3.up * lift_up_cam;
+        }
+    }
     void Start()
     {
         
@@ -26,13 +34,29 @@ public class Cam_Movement : MonoBehaviour
         if (mouse_axis.magnitude != 0)
             RotateCam(mouse_axis);
     }
+    RaycastHit hit_info;
+    
     public void MoveCam()
     {
         Vector3 forw = transform.forward;
+        float real_distance = distance;
+        if (Physics.Raycast(new Ray(player.transform.position, -forw), out hit_info))
+        {
+            Debug.Log("Smth back of the cam");
+            if (Vector3.Distance(player.transform.position, hit_info.transform.position) < distance)
+            {
+                //real_distance = Vector3.Distance(player.transform.position, hit_info.transform.position);
+                transform.position = hit_info.transform.position;
+            }
+            else
+            {
+                transform.position = player.transform.position - forw * distance;
+            }
+        }
         if (cam_mode == CamPersonMode.ThirdPersonMode)
         {
-            transform.position = player.transform.position - forw * distance;
-            transform.Translate(Vector3.up * 2);
+            //transform.position = player.transform.position - forw * real_distance;
+            //transform.Translate(Vector3.up * lift_up_cam);
         }
         else if (cam_mode == CamPersonMode.FirstPersonMode)
         {
@@ -40,9 +64,8 @@ public class Cam_Movement : MonoBehaviour
         }
         else if (cam_mode == CamPersonMode.Ghost)
         {
-            transform.position = player.transform.position - forw * distance;
+            transform.position = player.transform.position - forw * real_distance;
         }
-        
         
     }
     void RotateCam(Vector2 _mouse_axis)
@@ -51,8 +74,8 @@ public class Cam_Movement : MonoBehaviour
         _mouse_axis.y *= -1;
         if (cam_mode == CamPersonMode.ThirdPersonMode)
         {
-            transform.RotateAround(player.transform.position, Vector3.up, _mouse_axis.x);
-            transform.RotateAround(player.transform.position, transform.right, _mouse_axis.y);
+            transform.RotateAround(player.transform.position + LiftUp, Vector3.up, _mouse_axis.x);
+            transform.RotateAround(player.transform.position + LiftUp, transform.right, _mouse_axis.y);
         }
         else if (cam_mode == CamPersonMode.FirstPersonMode)
         {

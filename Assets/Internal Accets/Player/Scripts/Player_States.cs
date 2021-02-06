@@ -11,18 +11,6 @@ public class Player_States : MonoBehaviour
         Ghost
     }
     [SerializeField] Player_Types player_type;
-    [SerializeField] GameObject prop;
-    public GameObject Prop
-    {
-        get
-        {
-            return prop;
-        }
-        set
-        {
-            prop = value;
-        }
-    }
     void Start()
     {
 

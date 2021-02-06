@@ -10,10 +10,8 @@ public class Jump_Logic : MonoBehaviour
     Rigidbody rb;
     bool can_jump = false;
     bool is_on_ground;
-    GameObject prop;
     void Start()
     {
-        prop = GetComponent<Player_States>().Prop;
         rb = GetComponent<Rigidbody>();
         gameObject.AddComponent<Rigidbody>();
     }
