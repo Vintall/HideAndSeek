@@ -27,6 +27,7 @@ public class Move_Logic : MonoBehaviour
         float angle = Vector3.Angle(cam_forv, axis);
         cam_forv.y = 0;
         int horizontal_abs;
+
         if (horizontal_axis == 0) horizontal_abs = 0;
         else horizontal_abs = (int)(horizontal_axis / Mathf.Abs(horizontal_axis));
 
@@ -34,6 +35,11 @@ public class Move_Logic : MonoBehaviour
         Vector3 movement_horizontal = new Vector3(cam_forv.z * horizontal_abs, 0, -1 * cam_forv.x * horizontal_abs);
         Vector3 movement = movement_horizontal + movement_vertical;
 
-        rb.AddForce(movement.normalized * move_speed * rb.mass, ForceMode.Impulse);
+        float speed;
+        if (Input.GetAxis("Speed_Up") > 0) speed = run_speed;
+        else if (Input.GetAxis("Speed_Down") > 0) speed = sneak_speed;
+        else speed = move_speed;
+
+        rb.AddForce(movement.normalized * speed * rb.mass, ForceMode.Impulse);
     }
 }
