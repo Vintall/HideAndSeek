@@ -7,7 +7,6 @@ public class Move_Logic : MonoBehaviour
     [SerializeField] float move_speed;
     [SerializeField] float run_speed;
     [SerializeField] float sneak_speed;
-    [SerializeField] public Camera cam;
     Rigidbody rb;
     void Start()
     {
@@ -22,7 +21,7 @@ public class Move_Logic : MonoBehaviour
         float vertical_axis = Input.GetAxis("Vertical");
         float horizontal_axis = Input.GetAxis("Horizontal");
 
-        Vector3 cam_forv = cam.transform.forward.normalized;
+        Vector3 cam_forv = Player_Cam_Singleton.cam.forward.normalized;
         Vector3 axis = new Vector3(vertical_axis, 0, horizontal_axis);
         float angle = Vector3.Angle(cam_forv, axis);
         cam_forv.y = 0;

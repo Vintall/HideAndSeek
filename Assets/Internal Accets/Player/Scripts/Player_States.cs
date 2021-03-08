@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class Player_States : MonoBehaviour
 {
-    enum Player_Types
+    public enum Player_Types
     {
         Hider,
         Seeker,
         Ghost
     }
     [SerializeField] Player_Types player_type;
+    public Player_Types PlayerType
+    {
+        get
+        {
+            return player_type;
+        }
+    }
     void Start()
     {
 

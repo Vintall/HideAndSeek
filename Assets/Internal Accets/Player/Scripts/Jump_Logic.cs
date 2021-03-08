@@ -13,7 +13,6 @@ public class Jump_Logic : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        gameObject.AddComponent<Rigidbody>();
     }
     void FixedUpdate()
     {

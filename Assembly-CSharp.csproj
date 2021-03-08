@@ -59,7 +59,9 @@
     <Compile Include="Assets\Internal Accets\Props\Scripts\Props.cs" />
     <Compile Include="Assets\Internal Accets\Props\Scripts\PropsState.cs" />
     <Compile Include="Assets\Internal Accets\Props\Scripts\PropsSpawner.cs" />
+    <Compile Include="Assets\Internal Accets\Player\Scripts\Init_Player.cs" />
     <Compile Include="Assets\Internal Accets\Cam\Cam_Movement.cs" />
+    <Compile Include="Assets\Internal Accets\Player\Scripts\Player_Cam_Singleton.cs" />
     <Compile Include="Assets\Internal Accets\Props\Scripts\Add_RB.cs" />
     <Compile Include="Assets\Internal Accets\Map\Map.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Player_States.cs" />
@@ -67,8 +69,12 @@
     <Compile Include="Assets\Internal Accets\Player\Scripts\Move_Logic.cs" />
     <Compile Include="Assets\Internal Accets\Map\Map_Generator.cs" />
     <Compile Include="Assets\Internal Accets\Hexagone\HexagoneStates.cs" />
-    <Compile Include="Assets\Internal Accets\Player\Scripts\Select_Prop.cs" />
-    <Compile Include="Assets\Internal Accets\Player\Scripts\Game_Controller.cs" />
+    <Compile Include="Assets\Internal Accets\Player\Scripts\CursorSelect.cs" />
+    <Compile Include="Assets\Internal Accets\GameController\Game_Controller.cs" />
+    <Compile Include="Assets\Internal Accets\Player\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Internal Accets\Items\Scripts\Item.cs" />
+    <Compile Include="Assets\Internal Accets\Items\List\Test_Item\Test_Item.cs" />
+    <Compile Include="Assets\Internal Accets\Items\Scripts\Items.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Internal Accets\Props\NewSurfaceShader.shader" />

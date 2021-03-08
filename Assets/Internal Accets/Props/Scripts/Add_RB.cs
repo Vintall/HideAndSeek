@@ -12,12 +12,12 @@ public class Add_RB : MonoBehaviour
     {
         float mass = 1;
         mass = GetComponent<PropsState>().Mass;
-        if (gameObject.transform.parent.name == "Props")
+        if (transform.parent.name == "Props")
         {
             gameObject.AddComponent<Rigidbody>();
             GetComponent<Rigidbody>().mass = mass;
         }
-        else if (gameObject.transform.parent.name == "PlayerProp")
-            gameObject.transform.parent.transform.parent.GetComponent<Rigidbody>().mass = mass;
+        else if (transform.parent.name == "PlayerProp")
+            transform.parent.transform.parent.GetComponent<Rigidbody>().mass = mass;
     }
 }
