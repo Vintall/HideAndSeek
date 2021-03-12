@@ -24,11 +24,11 @@ public class Cursor_Select : MonoBehaviour
 
     void VisualSelect()
     {
-        selected_object.GetComponent<MeshRenderer>().material = red;
+        selected_object.GetComponent<MeshRenderer>().material.SetInt("_OutlineToggle", 1);
     }
     void VisualUnSelect()
     {
-        selected_object.GetComponent<MeshRenderer>().material = white;
+        selected_object.GetComponent<MeshRenderer>().material.SetInt("_OutlineToggle", 0);
     }
     void FixedUpdate()
     {
