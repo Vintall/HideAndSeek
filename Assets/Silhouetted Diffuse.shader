@@ -4,7 +4,6 @@
 		_OutlineColor("Outline Color", Color) = (0,0,0,1)
 		_Outline("Outline width", Range(0, 1)) = .1
 		_MainTex("Base (RGB)", 2D) = "white" { }
-		_OutlineToggle("Outline_bool", Int) = 0
 	}
 
 		CGINCLUDE
@@ -22,7 +21,6 @@
 
 	uniform float _Outline;
 	uniform float4 _OutlineColor;
-	int _OutlineToggle;
 	v2f vert(appdata v) {
 		// just make a copy of incoming vertex data but scaled according to normal direction
 		v2f o;
@@ -34,7 +32,7 @@
 		//float3 norm   = normalize(mul ((float3x3)UNITY_MATRIX_IT_MV, v.normal));
 		//float2 offset = TransformViewToProjection(norm.xy);
 
-		o.color = _OutlineColor * _OutlineToggle;
+		o.color = _OutlineColor;
 		return o;
 	}
 	ENDCG

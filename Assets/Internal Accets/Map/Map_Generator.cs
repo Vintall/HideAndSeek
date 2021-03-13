@@ -13,6 +13,7 @@ public class Map_Generator : MonoBehaviour
     float low_radius;
     void GenerateMap()
     {
+        
         GameObject cur;
         Quaternion qua = new Quaternion();
         qua.eulerAngles = new Vector3(-90, 90, 0);
