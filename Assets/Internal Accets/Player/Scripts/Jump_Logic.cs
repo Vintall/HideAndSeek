@@ -52,8 +52,6 @@ public class Jump_Logic : MonoBehaviour
             if (normal_angle >= angle || normal_angle == 0)
             {
                 is_on_ground = true;
-                //if (!can_jump)
-                //StartCoroutine(ReJumpCooldown());
                 break;
             }
         }

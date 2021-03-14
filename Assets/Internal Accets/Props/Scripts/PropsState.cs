@@ -30,8 +30,8 @@ public class PropsState : MonoBehaviour
             if (normal_angle >= angle || normal_angle == 0)
             {
                 is_on_ground = true;
+                break;
             }
-            break;
         }
     }
     private void OnCollisionExit(Collision collision)

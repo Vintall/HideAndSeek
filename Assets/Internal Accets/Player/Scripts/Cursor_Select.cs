@@ -7,7 +7,6 @@ public class Cursor_Select : MonoBehaviour
     [SerializeField] Material red;
     [SerializeField] Material white;
     [SerializeField] float radius; //Distanse from player pos to raycast_hit
-    [SerializeField] GameObject settings_manager;
 
     bool item_pressed = false;
     bool prop_pressed = false;
@@ -22,17 +21,16 @@ public class Cursor_Select : MonoBehaviour
     RaycastHit hit_info;
     Ray raycast_ray;
     ObjType obj_type;
-    Settings settings;
 
     private void Start()
     {
-        settings = settings_manager.GetComponent<Settings_Pointers>().settings;
+        
     }
 
     void VisualSelect()
     {
-        selected_object.GetComponent<MeshRenderer>().material.SetColor("_OutlineColor", new Color(settings.outline_color_r, settings.outline_color_g, settings.outline_color_b));
-        selected_object.GetComponent<MeshRenderer>().material.SetFloat("_Outline", settings.outline_heigth);
+        selected_object.GetComponent<MeshRenderer>().material.SetFloat("_Outline", SettingsManager.manager.GetComponent<Settings_Pointers>().settings.outline_heigth);
+        selected_object.GetComponent<MeshRenderer>().material.SetColor("_OutlineColor", new Color(SettingsManager.manager.GetComponent<Settings_Pointers>().settings.outline_color_r, SettingsManager.manager.GetComponent<Settings_Pointers>().settings.outline_color_g, SettingsManager.manager.GetComponent<Settings_Pointers>().settings.outline_color_b));
     }
     void VisualUnSelect()
     {
@@ -51,16 +49,25 @@ public class Cursor_Select : MonoBehaviour
         {
             if (hit_info.transform.GetComponentInParent<Props>() != null)
             {
-                selected_object = hit_info.transform.gameObject;
-                VisualSelect();
-                obj_type = ObjType.Prop;
+                PropSelect();
             }
             else if (hit_info.transform.GetComponentInParent<Items>() != null)
             {
-                selected_object = hit_info.transform.gameObject;
-                VisualSelect();
-                obj_type = ObjType.Item;
+                ItemSelect();
             }
+        }
+
+        void PropSelect()
+        {
+            selected_object = hit_info.transform.gameObject;
+            VisualSelect();
+            obj_type = ObjType.Prop;
+        }
+        void ItemSelect()
+        {
+            selected_object = hit_info.transform.gameObject;
+            VisualSelect();
+            obj_type = ObjType.Item;
         }
 
         if (Input.GetAxis("PickUp") == 1 && !item_pressed && obj_type == ObjType.Item)

@@ -56,32 +56,35 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Internal Accets\SettingsManager\Settings_Pointers.cs" />
     <Compile Include="Assets\Internal Accets\Props\Scripts\Props.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Swap_Prop.cs" />
     <Compile Include="Assets\Internal Accets\Props\Scripts\PropsState.cs" />
     <Compile Include="Assets\Internal Accets\Props\Scripts\PropsSpawner.cs" />
+    <Compile Include="Assets\Internal Accets\SettingsManager\Save_Settings.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Init_Player.cs" />
     <Compile Include="Assets\Internal Accets\Cam\Cam_Movement.cs" />
+    <Compile Include="Assets\Internal Accets\SettingsManager\Settings.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Player_Cam_Singleton.cs" />
     <Compile Include="Assets\Internal Accets\Props\Scripts\Add_RB.cs" />
     <Compile Include="Assets\Internal Accets\Map\Map.cs" />
+    <Compile Include="Assets\Internal Accets\SettingsManager\SettingsManager.cs" />
     <Compile Include="Assets\Internal Accets\Items\Scripts\Item.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Player_States.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Jump_Logic.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Move_Logic.cs" />
     <Compile Include="Assets\Internal Accets\Items\List\Test_Item\Test_Item.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Pick_Up_Item.cs" />
+    <Compile Include="Assets\Internal Accets\SettingsManager\Load_Settings.cs" />
     <Compile Include="Assets\Internal Accets\Map\Map_Generator.cs" />
     <Compile Include="Assets\Internal Accets\Hexagone\HexagoneStates.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Cursor_Select.cs" />
     <Compile Include="Assets\Internal Accets\GameController\Game_Controller.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Inventory.cs" />
     <Compile Include="Assets\Internal Accets\Items\Scripts\Items.cs" />
-    <Compile Include="Assets\Internal Accets\Settings\Settings.cs" />
-    <Compile Include="Assets\Internal Accets\Settings\Save_Settings.cs" />
-    <Compile Include="Assets\Internal Accets\Settings\Load_Settings.cs" />
-    <Compile Include="Assets\Internal Accets\Settings\Settings_Pointers.cs" />
-    <Compile Include="Assets\Internal Accets\Settings\SettingsManager.cs" />
+    <Compile Include="Assets\Internal Accets\Items\ItemData.cs" />
+    <Compile Include="Assets\Internal Accets\InventoryManager\InventoryManager.cs" />
+    <Compile Include="Assets\Internal Accets\UI\InventoryUI.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Internal Accets\Props\NewSurfaceShader.shader" />
