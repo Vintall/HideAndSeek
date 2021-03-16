@@ -42,6 +42,10 @@ public class InventoryManager : MonoBehaviour
     {
         panel.GetComponent<InventoryUI>().cells[cell_num].GetComponent<Image>().sprite = sprite;
     }
+    public void ClearCellSprite(int cell_num)
+    {
+        panel.GetComponent<InventoryUI>().cells[cell_num].GetComponent<Image>().sprite = null;
+    }
 
     void SetCellsActive(int cell_num)
     {

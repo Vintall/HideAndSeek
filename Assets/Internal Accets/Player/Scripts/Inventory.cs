@@ -44,7 +44,13 @@ public class Inventory : MonoBehaviour
     }
     public void UseItem()
     {
-        inventory[InventoryManager.manager.CurrentCell - 1].item.GetComponent<Item>().Use();
+        if (inventory[InventoryManager.manager.CurrentCell - 1].item != null)
+        {
+            inventory[InventoryManager.manager.CurrentCell - 1].item.GetComponent<Item>().Use();
+            inventory[InventoryManager.manager.CurrentCell - 1] = new InventoryCell();
+
+            InventoryManager.manager.ClearCellSprite(InventoryManager.manager.CurrentCell - 1);
+        }
     }
     void Start()
     {

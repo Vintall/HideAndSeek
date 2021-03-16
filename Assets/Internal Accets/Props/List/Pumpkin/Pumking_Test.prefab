@@ -11,12 +11,9 @@ GameObject:
   - component: {fileID: 8633732437423257596}
   - component: {fileID: 3548254333613650038}
   - component: {fileID: 8007302288714316626}
-  - component: {fileID: 1691171744}
-  - component: {fileID: 1691171745}
-  - component: {fileID: 1691171746}
-  - component: {fileID: 1691171747}
   - component: {fileID: 97660275}
   - component: {fileID: 97660274}
+  - component: {fileID: 729462649}
   m_Layer: 0
   m_Name: Pumking_Test
   m_TagString: Untagged
@@ -87,58 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1691171744
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3282099382049635047}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.81
-  m_Center: {x: 0, y: -1.2, z: 0}
---- !u!135 &1691171745
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3282099382049635047}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.81
-  m_Center: {x: 0, y: 1.2, z: 0}
---- !u!135 &1691171746
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3282099382049635047}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.81
-  m_Center: {x: -1.2, y: 0, z: 0}
---- !u!135 &1691171747
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3282099382049635047}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.81
-  m_Center: {x: 1.2, y: 0, z: 0}
 --- !u!114 &97660275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +110,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prop_state: 0
   mass: 0
+--- !u!64 &729462649
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282099382049635047}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3339082285309697363, guid: a01a505121cf01c4da5d27f30b5d3357, type: 3}

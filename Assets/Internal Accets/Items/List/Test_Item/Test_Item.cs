@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Test_Item : ItemAbility, IItemAbility
 {
     public override void Use()
@@ -12,19 +13,16 @@ public class Test_Item : ItemAbility, IItemAbility
         {
             gameObject.transform.position = hit_info.point;
             gameObject.SetActive(true);
+            
         }
     }
-
     void Start()
     {
         
     }
 
-    
     void Update()
     {
         
     }
-
-
 }

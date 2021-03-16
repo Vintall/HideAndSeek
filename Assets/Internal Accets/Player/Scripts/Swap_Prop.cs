@@ -6,6 +6,9 @@ public class Swap_Prop : MonoBehaviour
 {
     public void Swap(GameObject obj)
     {
+        if (GetComponent<Player_States>().PlayerType != Player_States.Player_Types.Hider)
+            return;
+
         Transform player_prop = transform.Find("PlayerProp").transform.GetChild(0);
         Rigidbody prop_rb = obj.transform.gameObject.GetComponent<Rigidbody>();
         Rigidbody player_rb = GetComponent<Rigidbody>();

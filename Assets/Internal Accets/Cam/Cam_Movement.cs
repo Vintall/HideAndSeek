@@ -5,13 +5,12 @@ using UnityEngine;
 
 public class Cam_Movement : MonoBehaviour
 {
-    enum CamPersonMode
+    public enum CamPersonMode
     {
         FirstPersonMode,
-        ThirdPersonMode,
-        Ghost
+        ThirdPersonMode
     }
-    [SerializeField] CamPersonMode cam_mode;
+    public CamPersonMode cam_mode;
     [SerializeField] float distance = 10;
     [SerializeField] float sensitivity = 1f;
     [SerializeField] float lift_up_cam = 2;
@@ -52,10 +51,6 @@ public class Cam_Movement : MonoBehaviour
         {
             transform.position = Player_Cam_Singleton.player.position;
         }
-        else if (cam_mode == CamPersonMode.Ghost)
-        {
-            transform.position = Player_Cam_Singleton.player.position - forw * real_distance;
-        }
     }
     void RotateCam(Vector2 _mouse_axis)
     {
@@ -74,10 +69,6 @@ public class Cam_Movement : MonoBehaviour
             transform.Rotate(new Vector3(0, _mouse_axis.x, 0), Space.World);
             transform.Rotate(new Vector3(_mouse_axis.y, 0, 0), Space.Self);
 
-        }
-        else if (cam_mode == CamPersonMode.Ghost)
-        {
-            transform.RotateAround(Player_Cam_Singleton.player.position, Vector3.up, _mouse_axis.x);
         }
        
         

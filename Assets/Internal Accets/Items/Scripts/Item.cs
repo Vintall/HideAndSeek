@@ -29,6 +29,7 @@ public class Item : MonoBehaviour
     public void Use()
     {
         ability_component.Use();
+        //Destroy(gameObject);
     }
 
     void Start()
