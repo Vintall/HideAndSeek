@@ -39,6 +39,20 @@ public class Move_Logic : MonoBehaviour
         else if (Input.GetAxis("Speed_Down") > 0) speed = sneak_speed;
         else speed = move_speed;
 
+        switch (GetComponent<Player_States>().PlayerType)
+        {
+            case Player_States.Player_Types.Seeker:
+                
+                break;
+            case Player_States.Player_Types.Hider:
+
+                break;
+            case Player_States.Player_Types.Ghost:
+
+                break;
+        }
+
+
         rb.AddForce(movement.normalized * speed * rb.mass, ForceMode.Impulse);
     }
 }

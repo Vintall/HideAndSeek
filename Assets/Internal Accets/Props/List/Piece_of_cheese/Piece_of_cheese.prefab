@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5292785718718247439}
   - component: {fileID: 1006104785560344124}
   - component: {fileID: 1006104785560344123}
+  - component: {fileID: 1006104785560344125}
   m_Layer: 0
   m_Name: Piece_of_cheese
   m_TagString: Untagged
@@ -109,3 +110,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prop_state: 0
   mass: 0
+--- !u!64 &1006104785560344125
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941159273363510234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8820495910048295098, guid: 55e1807184b5e824da1c5d5381f9bddc, type: 3}

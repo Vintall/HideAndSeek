@@ -85,10 +85,13 @@
     <Compile Include="Assets\Internal Accets\GameController\Game_Controller.cs" />
     <Compile Include="Assets\Internal Accets\Player\Scripts\Inventory.cs" />
     <Compile Include="Assets\Internal Accets\Items\Scripts\Items.cs" />
+    <Compile Include="Assets\Internal Accets\Player\Scripts\Hider.cs" />
+    <Compile Include="Assets\Internal Accets\Player\Scripts\Seeker.cs" />
+    <Compile Include="Assets\External Accets\MouseCenter.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Internal Accets\Props\NewSurfaceShader.shader" />
-     <None Include="Assets\Silhouetted Diffuse.shader" />
+     <None Include="Assets\External Accets\Silhouetted Diffuse 1.shader" />
      <None Include="Assets\Mega Fantasy Props Pack\README.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.15f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

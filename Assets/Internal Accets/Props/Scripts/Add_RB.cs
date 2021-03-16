@@ -18,6 +18,6 @@ public class Add_RB : MonoBehaviour
             GetComponent<Rigidbody>().mass = mass;
         }
         else if (transform.parent.name == "PlayerProp")
-            transform.parent.transform.parent.GetComponent<Rigidbody>().mass = mass;
+            transform.parent.transform.parent.transform.parent.GetComponent<Rigidbody>().mass = mass;
     }
 }

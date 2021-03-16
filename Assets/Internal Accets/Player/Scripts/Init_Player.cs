@@ -16,11 +16,15 @@ public class Init_Player : MonoBehaviour
             case Player_States.Player_Types.Hider:
                 Player_Cam_Singleton.cam.GetComponent<Cam_Movement>().cam_mode = Cam_Movement.CamPersonMode.ThirdPersonMode;
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                GetComponent<Player_States>().HiderObj.gameObject.SetActive(true);
+                GetComponent<Player_States>().SeekerObj.gameObject.SetActive(false);
 
                 break;
             case Player_States.Player_Types.Seeker:
                 Player_Cam_Singleton.cam.GetComponent<Cam_Movement>().cam_mode = Cam_Movement.CamPersonMode.FirstPersonMode;
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+                GetComponent<Player_States>().HiderObj.gameObject.SetActive(false);
+                GetComponent<Player_States>().SeekerObj.gameObject.SetActive(true);
 
                 break;
             case Player_States.Player_Types.Ghost:

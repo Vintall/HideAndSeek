@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Piece_of_cheese
-  m_Shader: {fileID: 4800000, guid: 036f63d5f79d9d040a65c42b5bcf2d3f, type: 3}
+  m_Shader: {fileID: 4800000, guid: 2546919c2ddc32747b4397da84a0a9e8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

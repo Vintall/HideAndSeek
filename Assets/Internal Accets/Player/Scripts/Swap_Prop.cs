@@ -9,7 +9,10 @@ public class Swap_Prop : MonoBehaviour
         if (GetComponent<Player_States>().PlayerType != Player_States.Player_Types.Hider)
             return;
 
-        Transform player_prop = transform.Find("PlayerProp").transform.GetChild(0);
+        Transform player_prop_box = GetComponent<Player_States>().HiderObj.Find("PlayerProp");
+
+        Transform player_prop = player_prop_box.transform.GetChild(0);
+
         Rigidbody prop_rb = obj.transform.gameObject.GetComponent<Rigidbody>();
         Rigidbody player_rb = GetComponent<Rigidbody>();
 
@@ -27,13 +30,15 @@ public class Swap_Prop : MonoBehaviour
 
         player_prop.position = player_pos;
         player_prop.parent = obj.transform.parent; //Change Player GameObject instance as prop
-        obj.transform.parent = gameObject.transform.Find("PlayerProp"); //Give Prop a new parent inside the player
+
+        obj.transform.parent = player_prop_box; //Give Prop a new parent inside the player
+
         player_prop.GetComponent<Add_RB>().AddRigidBody();
 
         player_prop.GetComponent<Rigidbody>().velocity = player_velocity;
         player_prop.GetComponent<Rigidbody>().rotation = player_rotation;
 
-        transform.Find("PlayerProp").transform.GetChild(0).transform.localPosition = Vector3.zero;
+        GetComponent<Player_States>().HiderObj.Find("PlayerProp").transform.GetChild(0).transform.localPosition = Vector3.zero;
         transform.position = prop_pos;
     }
 }

@@ -68,9 +68,8 @@ public class Cam_Movement : MonoBehaviour
         {
             transform.Rotate(new Vector3(0, _mouse_axis.x, 0), Space.World);
             transform.Rotate(new Vector3(_mouse_axis.y, 0, 0), Space.Self);
-
         }
-       
+
         
     }
     private void Update()

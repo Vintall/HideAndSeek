@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Inspector
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 95
+  controlID: 49
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -150,7 +150,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 15
+  controlID: 50
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 16
+  controlID: 51
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -459,21 +459,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Internal Accets/Items/List/Test_Item
+    - Assets/Internal Accets/Cam
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 82
   m_LastFolders:
-  - Assets/Internal Accets/Items/List/Test_Item
+  - Assets/Internal Accets/Cam
   m_LastFoldersGridSize: 82
   m_LastProjectPath: C:\Users\Vintall\Desktop\hide_and_seek\HideAndSeek
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 603a0000
-    m_LastClickedID: 14944
-    m_ExpandedIDs: 0000000086390000883900008a3900008c3900008e390000a6390000aa3900005e3a000000ca9a3b
+    m_SelectedIDs: aa390000
+    m_LastClickedID: 14762
+    m_ExpandedIDs: 0000000086390000883900008a3900008c3900008e390000b2390000b6390000d039000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -529,7 +529,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000723b000000000000143a0000
+    m_ExpandedInstanceIDs: c6230000723b0000143a000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -623,23 +623,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 28ddffff42faffff46faffff56faffff2afbffff60fbffff5c37000086370000
+      m_SelectedIDs: 86370000
+      m_LastClickedID: 14214
+      m_ExpandedIDs: 30e4ffff3ef9ffff50f9ffff3efaffff60fbffff5c37000086370000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Seeker
-        m_OriginalName: Seeker
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -8920
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -685,9 +685,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -15.738335, y: 12.43308, z: -10.3575}
+    m_Target: {x: 0.5510623, y: 0.9127399, z: -13.496241}
     speed: 2
-    m_Value: {x: -15.738335, y: 12.43308, z: -10.3575}
+    m_Value: {x: 0.5510623, y: 0.9127399, z: -13.496241}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -734,9 +734,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.13654645, y: -0.6234947, z: 0.13299932, w: -0.7606948}
+    m_Target: {x: 0.0070901923, y: -0.9720264, z: 0.23886366, w: -0.04253732}
     speed: 2
-    m_Value: {x: -0.1362921, y: -0.6223333, z: 0.13275157, w: -0.7592778}
+    m_Value: {x: 0.007076932, y: -0.9702085, z: 0.23841694, w: -0.042457767}
   m_Size:
     m_Target: 1.5380878
     speed: 2
